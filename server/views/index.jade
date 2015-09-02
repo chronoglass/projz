@@ -1,0 +1,26 @@
+extends layout-nologin
+
+block content
+  div#top
+   img(src='http://placekitten.com/g/50/50') 
+   h1#toptitle= title
+  div#center
+    div#messageBox
+     p#intro-w Welcome to #{title}
+     p#intro-0 Did you do it yet, is a platform for goal management, whether your goals are short term, like taking out the trash every day, or far grander and long term, such as parachuting out of a hot air balloon over the swiss alps in scuba gear before you die. We are here to help keep you on track.
+     p#intro-1 What we do is simple, reminding you in a predetermined timeframe of what you want to do by asking.. Did you do it yet? What we hope to do is encourage discussion amongst the "have dones" and the "want to do's".
+     p#intro-2 Sign up and start entering your its today!
+  div#greeterBox
+    p#signin Current Users:
+    form(action="/signin", method="post")
+     input#inputsignin(type="text", name="username")
+     input#inputsignin(type="password", name="password")
+     input#inputsignin(type="submit", class="btn" value="Log In")
+    p#signup New to DYDIY?
+     form(action="/signup", method="post")
+      input(type="text", placeholder="username", name="username")
+      input(type="text", placeholder="e-mail", name="useremail")
+      input(type="password", placeholder="password", name="pwd")
+      input(type="submit", class="btn" value="Sign Up")
+  div#footer
+   p#footer-1 test footer
