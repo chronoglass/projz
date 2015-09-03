@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  form#formUserAdd(name="userAdd",method="post",action="/signup")
+    input#inputUserName(type="text", placeholder="username", name="username")
+    input#inputUserName(type="text", placeholder="first", name="userNameFirst")
+    input#inputUserName(type="text", placeholder="last", name="userNameLast")
+    input#inputUserEmail(type="text", placeholder="e-mail", name="useremail")
+    input#inputUserName(type="text", placeholder="location", name="userLocation")
+    input#inputUserName(type="text", placeholder="password", name="userPassword")
+    button#btnSubmit(type="submit") Sign Up

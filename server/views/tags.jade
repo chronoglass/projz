@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.
+    Tag List
+  ul
+    each tag, i in tags
+      li
+        '#{tag.tagDef}

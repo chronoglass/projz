@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to our test
+  //wrapper
+  #wrapper
+    // User Info
+    #userInfo
+      h2 User Info
+      p
+        strong Name:
+        |  <span id='userInfoName'></span>
+    // /User Info
+    // USER LIST
+    h2 User List
+    #userList
+      table
+        thead
+          th UserName
+          th Email
+          th User Level
+          th Delete?
+        tbody
+    // /User List
+    // ADD USER
+    h2 Add User
+    #addUser
+      fieldset
+        input#inputUserName(type="text", placeholder="username", name="username")
+        input#inputUserName(type="text", placeholder="first", name="userNameFirst")
+        input#inputUserName(type="text", placeholder="last", name="userNameLast")
+        input#inputUserEmail(type="text", placeholder="e-mail", name="useremail")
+        input#inputUserName(type="text", placeholder="location", name="userLocation")
+        input#inputUserName(type="text", placeholder="password", name="userPassword")
+        br
+        button#btnAddUser Add User
+    // / ADD USER
+  // /wrapper

@@ -1,0 +1,59 @@
+extends layout-admin
+
+block content
+  h1= title
+  block panels
+    button#btnUserPanel(value=0) Users
+    button#btnThingPanel(value=1) things
+    button#btnTagPanel tags
+    //wrapper
+    #userwrapper
+      // User Info
+      #userInfo
+        h2 User Info
+        p
+          strong Name:
+          |  <span id='userInfoName'></span>
+      // /User Info
+      // USER LIST
+      h2 User List
+      #userList
+        table
+          thead
+            th First
+            th Last
+            th UserName
+            th Email
+            th Location
+            th User Level
+            th Delete?
+          tbody
+      // /User List
+      // ADD USER
+      h2 Add User
+      #addUser
+        fieldset
+          input#inputUserNick(type="text", placeholder="username", name="username")
+          input#inputUserNameFirst(type="text", placeholder="first", name="userNameFirst")
+          input#inputUserNameLast(type="text", placeholder="last", name="userNameLast")
+          input#inputUserEmail(type="text", placeholder="e-mail", name="useremail")
+          input#inputUserLoc(type="text", placeholder="location", name="userLocation")
+          input#inputUserPwd(type="text", placeholder="password", name="userPassword")
+          br
+          button#btnAddUser Add User
+      // / ADD USER
+    // /wrapper
+    #thingwrapper
+      #thingSearch
+        input#inputThingSearch(type="text", placeholder="search", name="adminthingsearch")
+      // Thing LIST
+      h2 thing list
+      #adminThingList
+        table
+          thead
+            th Title
+            th owner
+            th action
+          tbody
+      // /Thing List
+    // /wrapper

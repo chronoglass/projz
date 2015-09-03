@@ -7,28 +7,44 @@
     "validateUpsert": true
   },
   "properties": {
-    "title": {
-      "type": "string",
-      "required": true
+    "level": {
+      "type": "number",
+      "required": false,
+      "comments": "default 0"
+    },
+    "shared": {
+      "type": "boolean",
+      "required": false,
+      "comments": "default no"
     },
     "dcreated": {
       "type": "date",
-      "required": true
+      "required": true,
+      "comments": "date created"
     },
     "dedited": {
       "type": "date",
-      "required": true
-    },
-    "ownerid": {
-      "type": "object",
-      "required": true
-    },
-    "parent": {
-      "type": "object"
+      "required": true,
+      "comments": "last date edited"
     },
     "desc": {
       "type": "string",
-      "required": false
+      "required": false,
+      "comments": "information"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "comments": "title of the thing"
+    },
+    "ownerid": {
+      "type": "object",
+      "required": false,
+      "comments": "who created this thing, default: creater"
+    },
+    "parent": {
+      "type": "object",
+      "comments": "top level, or task toward thing"
     }
   },
   "validations": [],

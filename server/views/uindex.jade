@@ -1,0 +1,28 @@
+extends layout-u
+block content
+  div#top
+    img(src='http://placekitten.com/g/50/50') 
+    h1#toptitle= title
+  div#center
+    // active things
+    h2 active things
+    #activethings
+      table
+        thead
+          th Title
+          th completion
+          th shared
+        tbody
+    // /active things
+    // edit form
+    #editform
+      fieldset
+        input#inputUserName(type="text", placeholder="title", name="thingTitle")
+        input#inputUserName(type="text", placeholder="status", name="thingStatus")
+        input#inputUserName(type="text", placeholder="description", name="thingDesc")
+        br
+        button#btnAddUser update
+    // /edit form
+    
+  div#footer
+   p#footer-1 test footer
